@@ -10,3 +10,5 @@ Primeiro instale as dependências:
 E rode com:
 
 `scrapy crawl items -a search_term "tenis nike" -o items.json`
+
+(Substitua *tenis nike* com o termo que deseja buscar)
