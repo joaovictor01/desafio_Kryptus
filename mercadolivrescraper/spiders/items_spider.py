@@ -6,7 +6,9 @@ class ItemsSpider(scrapy.Spider):
     
     def __init__(self, name=name, **kwargs):
         super().__init__(name, **kwargs)
-        self.start_urls = [kwargs.get('start_url')]
+        search_term = kwargs.get('search_term')
+        search_term = search_term.replace(' ','-')
+        self.start_urls = [f'https://lista.mercadolivre.com.br/{search_term}']
         self.page = 0
     
     def get_price(self, item):
